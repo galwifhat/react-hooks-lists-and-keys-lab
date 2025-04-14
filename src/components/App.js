@@ -6,12 +6,13 @@ import ProjectList from "./ProjectList";
 import user from "../data/user";
 
 function App() {
+  const projects = user.projects
   return (
     <div>
       <NavBar />
       <Home username={user.name} city={user.city} color={user.color} />
       <About bio={user.bio} links={user.links} />
-      <ProjectList projects={user.projects} />
+      <ProjectList projects={projects} />
     </div>
   );
 }
